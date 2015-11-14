@@ -4,9 +4,9 @@ int main() {
    int wrFd = creat("USConst.copy");
    int readBytes, writtenBytes;
    int totalReadBytes = 0, totalWrittenBytes = 0;
-   char * buffer[1424];
+   char buffer[8000];
    do {
-      readBytes = read(rdFd, buffer, 1424);
+      readBytes = read(rdFd, buffer, 1000);
 
       if (readBytes == -1) {
          printf("Fatal Error in read; Not expected;\n");
@@ -26,7 +26,7 @@ int main() {
       printf("Bytes written: %d; Total bytes written %d;\n",
              writtenBytes, totalWrittenBytes);
             
-   } while (readBytes == 1424);
+   } while (readBytes == 1000);
    
    printf("Total bytes read: %d;\n", totalReadBytes);
    printf("Total bytes written: %d;\n", totalWrittenBytes);

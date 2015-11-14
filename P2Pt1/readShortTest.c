@@ -4,7 +4,7 @@ int main() {
    int fd = open("GuyFawkes.txt");
    int readBytes;
    int totalReadBytes = 0;
-   char * buffer[1024];
+   char buffer[1024];
    do {
       readBytes = read(fd, buffer, 1024);
 

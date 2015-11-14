@@ -2,7 +2,7 @@
 int main() {
    int readBytes;
    int totalReadBytes = 0;
-   char * buffer[1024];
+   char buffer[1024];
    int fd = open("GuyFawkes.txt");
    int badFd = open("GuyFAWKES.txt");
    int protFd = open("R0W0.txt");

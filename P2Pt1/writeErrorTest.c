@@ -1,7 +1,7 @@
 #include "syscall.h"
 int main() {
    int writtenBytes;
-   char * buffer = "Should not be in the file\n";
+   char buffer[1024] = "Should not be in the file\n";
    int fd = open("GuyFawkes.txt");
    int badFd = open("GuyFAWKES.txt");
    int protFd = open("R0W0.txt");

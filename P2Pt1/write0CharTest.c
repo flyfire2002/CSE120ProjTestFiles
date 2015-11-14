@@ -4,7 +4,7 @@ int main() {
    int wrFd = creat("0Char.copy");
    int readBytes, writtenBytes;
    int totalReadBytes = 0, totalWrittenBytes = 0;
-   char * buffer[1024];
+   char buffer[1024];
    do {
       readBytes = read(rdFd, buffer, 1024);
 
