@@ -4,11 +4,11 @@
 
 int main () {
    int i;
-   char * fileName = "nonExistent";
+   char fileName[16] = "nonExistent";
    for (i = 2; i <= 20; i++) {
-      char * num[32];
-      sprintf(num, "%d", i);
-      strcat(fileName, num);
+      write(1, fileName, 14);
+      fileName[11] = (char)(63 + i);
+      fileName[12] = 0;
 
       int fdNE = open(fileName);
       printf("fdNE: %d; Supposed to be -1\n", fdNE);

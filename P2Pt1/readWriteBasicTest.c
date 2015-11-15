@@ -38,10 +38,12 @@ main ()
        // if the input is just a period, then exit
        if (buffer[0] == '.' &&
 	   buffer[1] == '\n') {
+      halt();
 	   return 0;
        }
 
        // echo the input to the output
        puts (buffer);
    }
+   halt();
 }

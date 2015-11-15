@@ -3,7 +3,7 @@ int main() {
    int fd = open("USConst.txt");
    int readBytes;
    int totalReadBytes = 0;
-   char * buffer[512];
+   char buffer[512];
    do {
       readBytes = read(fd, buffer, 512);
 

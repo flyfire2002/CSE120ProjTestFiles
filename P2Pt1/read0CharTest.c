@@ -3,7 +3,7 @@ int main() {
    int fd = open("0Char.txt");
    int readBytes;
    int totalReadBytes = 0;
-   char * buffer[1024];
+   char buffer[1024];
    do {
       readBytes = read(fd, buffer, 0);
 
